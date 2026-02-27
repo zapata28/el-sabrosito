@@ -1,16 +1,64 @@
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
-<p>el Sabrosito</p>
+<div class="carousel">
+
+  <div class="carousel-container">
+    <img
+      *ngFor="let img of imagenes; let i = index"
+      [src]="img"
+      [class.activa]="i === indiceActual"
+      class="imagen"
+    />
+  </div>
+
+  <button class="btn prev" (click)="anterior()">❮</button>
+  <button class="btn next" (click)="siguiente()">❯</button>
+
+  <div class="indicadores">
+    <span
+      *ngFor="let img of imagenes; let i = index"
+      (click)="irA(i)"
+      [class.activo]="i === indiceActual"
+    ></span>
+  </div>
+
+</div>
+
+<div class="contenido">
+  <h2>nuestros productos</h2>
+</div>
+
+ <div class="productos">
+
+  <div class="producto izquierda">
+    <img src="/productos/11.png" alt="Producto 1">
+    <p>Descripción producto 1</p>
+  </div>
+
+  <div class="producto centro">
+    <img src="/productos/12.png" alt="Producto 2">
+    <p>Descripción producto 2</p>
+  </div>
+
+  <div class="producto derecha">
+    <img src="/productos/13.png" alt="Producto 3">
+    <p>Descripción producto 3</p>
+  </div>
+</div>
+
+<div class="contenido">
+  <h2>Recetas, Salud y Nutricion</h2>
+</div>
+
+ <div class="productos">
+
+  <div class="producto izquierda">
+    <p>Descripción producto 1</p>
+  </div>
+
+  <div class="producto centro">
+    <p>Descripción producto 2</p>
+  </div>
+
+  <div class="producto derecha">
+    <p>Descripción producto 3</p>
+  </div>
+</div>

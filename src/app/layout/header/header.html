@@ -1,6 +1,6 @@
 <header style="
   color: #000000;
-  padding: 14px 30px;                /* más aire lateral */
+  padding: 14px 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.97rem;
   width: 100%;
@@ -14,14 +14,12 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    gap: 60px;                         /* ← AQUÍ: más espacio entre logo y primer contacto (dirección) */
+    gap: 60px;
     max-width: 1480px;
     margin: 0 auto;
     width: 100%;
   ">
-
-    <!-- Logo a la izquierda -->
-    <a href="/" style="
+  <a href="/" style="
       display: flex;
       align-items: center;
       gap: 16px;
@@ -37,19 +35,17 @@
       >
     </a>
 
-    <!-- Contactos – distribuidos con más aire -->
     <div style="
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 55px;                        /* espacio entre dirección, WhatsApp, teléfono+correo */
+      gap: 55px;
       flex: 1;
       min-width: 0;
       white-space: nowrap;
       font-size: 0.95rem;
     ">
 
-      <!-- Dirección -->
       <div style="display: flex; align-items: center; gap: 12px; line-height: 1.4;">
         <span style="font-size: 1.45rem;">📍</span>
         <span>
@@ -59,7 +55,6 @@
         </span>
       </div>
 
-      <!-- WhatsApp -->
       <a href="https://wa.me/573202342938" style="
         display: flex;
         align-items: center;
@@ -71,7 +66,6 @@
         <span>000000000000000</span>
       </a>
 
-      <!-- Teléfono y correo en columna -->
       <div style="
         display: flex;
         flex-direction: column;
@@ -102,8 +96,83 @@
           <span>@hotmail.com</span>
         </a>
       </div>
-
     </div>
-
   </div>
+
+  <!-- Menú principal – el recuadro amarillo que pediste -->
+  <nav style="
+    background-color: #fff176;          /* amarillo claro y bonito (material yellow 300) */
+    border: 2px solid #fbc02d;          /* borde mostaza para que resalte */
+    border-radius: 10px;
+    margin: 0 30px 20px 30px;           /* márgenes laterales iguales al padding superior + espacio abajo */
+    padding: 8px 0;
+    max-width: 1480px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* sombra suave opcional */
+  ">
+    <ul style="
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+    ">
+      <li><a href="/" style="
+        color: #212121;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      ">Home</a></li>
+
+      <li><a href="/nosotros" style="
+        color: #212121;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      ">Nosotros</a></li>
+
+      <li><a href="/productos" style="
+        color: #212121;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      ">Productos</a></li>
+
+      <li><a href="/donde-estamos" style="
+        color: #212121;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      ">Dónde Estamos</a></li>
+
+      <li><a href="/recetas-y-nutricion" style="
+        color: #212121;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      ">Recetas Y Nutrición</a></li>
+
+      <li><a href="/contacto" style="
+        color: #212121;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      ">Contacto</a></li>
+    </ul>
+  </nav>
+
 </header>
