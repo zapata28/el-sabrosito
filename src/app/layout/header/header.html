@@ -1,164 +1,54 @@
-<header style="
-  color: #000000;
-  padding: 2px 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.97rem;
-  width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  background: #ffffff;
-">
+<header class="header">
 
-  <div style="
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 60px;
-    max-width: 1480px;
-    margin: 0 auto;
-    width: 100%;
-  ">
-  <a href="/" style="
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: black;
-      flex-shrink: 0;
-      white-space: nowrap;
-    ">
-      <img
-        src="logo.png"
-        alt="El Sabrosito"
-        style="height: 68px; width: auto;"
-      >
+  <div class="topbar">
+
+    <!-- Logo -->
+    <a routerLink="/" class="logo">
+      <img src="logo.png" alt="El Sabrosito">
     </a>
 
-    <div style="
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 55px;
-      flex: 1;
-      min-width: 0;
-      white-space: nowrap;
-      font-size: 0.95rem;
-    ">
-
-      <div style="display: flex; align-items: center; gap: 12px; line-height: 1.4;">
-        <span style="font-size: 1.45rem;">📍</span>
-        <span>
-          Moniquirá, Boyacá<br>
-          Colombia
-        </span>
-      </div>
-
-      <a href="https://wa.me/573202342938" style="
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #000000;
-        text-decoration: none;
-      ">
-        <span style="font-size: 1.45rem;">💬</span>
-        <span>311 8798975</span>
-      </a>
-
-      <div style="
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        justify-content: center;
-      ">
-
-        <a href="mailto:manjareseltropico@hotmail.com" style="
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          color: #000000;
-          text-decoration: none;
-          white-space: nowrap;
-        ">
-          <span style="font-size: 1.4rem;">✉</span>
-          <span>yogurelsabrosito@hotmail.com</span>
-        </a>
-      </div>
+    <!-- Ubicación -->
+    <div class="item">
+      <span>📍</span>
+      <span>
+        Moniquirá, Boyacá<br>
+        Colombia
+      </span>
     </div>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/573118798975" target="_blank" class="item">
+      <span>💬</span>
+      <span>311 8798975</span>
+    </a>
+
+    <!-- Correo -->
+    <a href="mailto:yogurelsabrosito@hotmail.com" class="item">
+      <span>✉</span>
+      <span>yogurelsabrosito@hotmail.com</span>
+    </a>
+
   </div>
 
-  <nav style="
-    background-color: #fff176;
-    border: 2px solid #fbc02d;
-    border-radius: 10px;
-    margin: 0 30px 20px 30px;
-    padding: 8px 0;
-    max-width: 1480px;
-    box-sizing: border-box;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  ">
-    <ul style="
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px 24px;
-    ">
-      <li><a href="/" style="
-        color: #212121;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 10px 16px;
-        border-radius: 6px;
-        transition: background 0.2s;
-      ">Home</a></li>
+  <!-- Navegación -->
+  <nav class="navbar">
+    <ul>
 
-      <li><a href="/nosotros" style="
-        color: #212121;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 10px 16px;
-        border-radius: 6px;
-        transition: background 0.2s;
-      ">Nosotros</a></li>
+      <li><a routerLink="/">Home</a></li>
 
-      <li><a href="/productos" style="
-        color: #212121;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 10px 16px;
-        border-radius: 6px;
-        transition: background 0.2s;
-      ">Productos</a></li>
+      <li><a routerLink="/productos">Productos</a></li>
 
-      <li><a href="/donde-estamos" style="
-        color: #212121;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 10px 16px;
-        border-radius: 6px;
-        transition: background 0.2s;
-      ">Dónde Estamos</a></li>
+      <li><a routerLink="/donde-estamos">Dónde Estamos</a></li>
 
-      <li><a href="/recetas-y-nutricion" style="
-        color: #212121;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 10px 16px;
-        border-radius: 6px;
-        transition: background 0.2s;
-      ">Recetas Y Nutrición</a></li>
+      <li><a routerLink="/recetas-y-nutricion">
+        Recetas Y Nutrición
+      </a></li>
 
-      <li><a href="/contacto" style="
-        color: #212121;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 10px 16px;
-        border-radius: 6px;
-        transition: background 0.2s;
-      ">Contacto</a></li>
+      <li><a routerLink="/contacto">Contacto</a></li>
+
+      <li><a routerLink="/quienes-somos">Quiénes Somos</a></li>
+
     </ul>
   </nav>
+
 </header>

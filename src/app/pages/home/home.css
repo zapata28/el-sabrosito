@@ -1,116 +1,217 @@
 .carousel {
-  position: relative;
+  margin: 150px 0 0 0;
   width: 100%;
-  height: 100vh; /* ocupa toda la altura de la pantalla */
-  overflow: hidden;
-}
-
-.carousel-track {
+  padding: 2.5rem 0 0.5rem 0;
+  perspective: 1200px;
   display: flex;
-  height: 100%;
-  transition: transform 0.6s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  height: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* llena sin deformar */
+  justify-content: center;
+  background: #7574744b;
 }
 
 .carousel-container {
+  width: 180%;
+  max-width: 1100px;
   position: relative;
-  width: 100%;
-  height: 100%;
+
 }
 
-.imagen {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.imagen.activa {
-  opacity: 1;
-}
-
-.btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.indicadores {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  text-align: center;
-}
-
-.indicadores span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  background: white;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.indicadores span.activo {
-  opacity: 1;
-  background: #000;
-}
-
-.contenido {
-  padding: 20px;
-  text-align: center;
-  color: red;
-}
-
-.productos {
+.carousel-track {
+  position: relative;
+  height: 480px;
   display: flex;
-  width: 100%;
-  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.producto {
-  width: 33.33%;
+.slide {
+  position: absolute;
+  transition: all .8s cubic-bezier(.25,.8,.25,1);
 }
 
-.producto img {
-  width: 250px;
-  height: 250px;
+.slide img {
+  width: 380px;
+  height: 480px;
   object-fit: cover;
-  border-radius: 12px;
-}
-
-.izquierda {
-  text-align: left;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .centro {
+  transform: translateX(0) scale(1) rotateY(0);
+  z-index: 3;
+  opacity: 1;
+}
+
+.izq {
+  transform: translateX(-350px) scale(.85) rotateY(25deg);
+  opacity: .6;
+  filter: blur(2px);
+  z-index: 2;
+}
+
+.der {
+  transform: translateX(350px) scale(.85) rotateY(-25deg);
+  opacity: .6;
+  filter: blur(2px);
+  z-index: 2;
+}
+
+.oculto {
+  opacity: 0;
+  transform: scale(.6);
+  z-index: 0;
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.dots {
+  margin-top: 15px;
   text-align: center;
 }
 
-.derecha {
-  text-align: right;
-  margin-right: 40px;
+.dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+.dots span.activo {
+  background: #fbc02d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.franja-institucional {
+  margin-top: 10px;
+  background: #fff176;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.franja-institucional h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.franja-institucional p {
+  max-width: 700px;
+  margin: auto;
+  color: #333;
+  font-size: 1rem;
+}
+
+
+.destacados {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.destacados h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+
+
+.cta {
+  background: #fbc02d;
+  padding: 1rem 1rem;
+  text-align: center;
+  color: #212121;
+}
+
+.btn-cta {
+  display: inline-block;
+  margin-top: 1px;
+  padding: 12px 28px;
+  background: #212121;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .slide img {
+    width: 260px;
+    height: 330px;
+  }
+
+  .izq {
+    transform: translateX(-200px) scale(.8) rotateY(20deg);
+  }
+
+  .der {
+    transform: translateX(200px) scale(.8) rotateY(-20deg);
+  }
+
 }
