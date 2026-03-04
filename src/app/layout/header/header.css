@@ -1,145 +1,79 @@
-/* =========================
-   HEADER GENERAL
-========================= */
-
 .header {
-  background: #ffffff;
-  width: 100%;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   z-index: 1000;
+  background: #fff176;
+  border-bottom: 2px solid #fbc02d;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar {
-  max-width: 1480px;
+/* NAVBAR FLEX */
+.navbar {
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 10px 30px;
+  padding: 2px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
 }
 
+/* LOGO */
 .logo img {
-  height: 68px;
+  height: 55px;
   width: auto;
 }
 
-.info {
-  display: flex;
-  align-items: center;
-  gap: 55px;
-  flex: 1;
-  justify-content: space-between;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.item.link {
-  text-decoration: none;
-  color: #000;
-}
-
-.icon {
-  font-size: 1.4rem;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-/* =========================
-   NAVBAR FULL WIDTH
-========================= */
-
-.navbar {
-  width: 100%;
-  background-color: #fff176;
-  border-top: 2px solid #fbc02d;
-  border-bottom: 2px solid #fbc02d;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  padding: 12px 0;
-}
-
+/* MENU */
 .navbar ul {
-  max-width: 1480px;
-  margin: 0 auto;
   list-style: none;
-  padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li a {
-  color: #212121;
   text-decoration: none;
+  color: #212121;
   font-weight: 600;
-  padding: 10px 16px;
-  border-radius: 6px;
-  transition: background 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-.navbar li a:hover {
-  background: #ffe082;
-}
 
-/* =========================
-   HAMBURGER
-========================= */
-
+/* HAMBURGER */
 .hamburger {
   display: none;
+  font-size: 26px;
   background: none;
   border: none;
-  font-size: 26px;
   cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 8px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
+@media (max-width: 900px) {
 
-@media (max-width: 1024px) {
-
-  .info {
-    display: none;
+  .hamburger {
+    display: block;
   }
 
-}
-
-@media (max-width: 768px) {
-
   .navbar ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff176;
     flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 20px 0;
+    width: 250px;
+    padding: 20px;
+    gap: 18px;
     display: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   }
 
   .navbar ul.active {
     display: flex;
-  }
-
-  .hamburger {
-    display: block;
   }
 
 }

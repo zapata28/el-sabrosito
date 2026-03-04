@@ -19,6 +19,7 @@ export class Home implements OnInit, OnDestroy {
   {
     src: 'carrousel/carrusel-3.png'
   }
+
 ];
 
 indiceActivo = 1;
@@ -57,7 +58,6 @@ irA(index: number) {
   this.indiceActivo = index;
 }
 
-/* Swipe móvil */
 onTouchStart(event: any) {
   this.startX = event.changedTouches[0].screenX;
 }

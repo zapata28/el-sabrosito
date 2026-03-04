@@ -1,5 +1,5 @@
 .carousel {
-  margin: 150px 0 0 0;
+  margin: 80px 0 0 0;
   width: 100%;
   padding: 2.5rem 0 0.5rem 0;
   perspective: 1200px;
@@ -62,18 +62,6 @@
   z-index: 0;
 }
 
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translate(-50%, 20px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-}
-
 .dots {
   margin-top: 15px;
   text-align: center;
@@ -95,18 +83,8 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
 .franja-institucional {
-  margin-top: 10px;
+  margin-top: 1px;
   background: #fff176;
   padding: 3rem 1rem;
   text-align: center;
@@ -123,7 +101,6 @@
   color: #333;
   font-size: 1rem;
 }
-
 
 .destacados {
   padding: 30px 0px;
@@ -163,8 +140,6 @@
   margin-bottom: 1rem;
 }
 
-
-
 .cta {
   background: #fbc02d;
   padding: 1rem 1rem;
@@ -187,18 +162,6 @@
   background: #000;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive */
 @media (max-width: 768px) {
 
   .slide img {
@@ -214,4 +177,15 @@
     transform: translateX(200px) scale(.8) rotateY(-20deg);
   }
 
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }

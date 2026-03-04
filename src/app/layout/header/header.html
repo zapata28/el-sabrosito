@@ -1,54 +1,27 @@
 <header class="header">
 
-  <div class="topbar">
+  <nav class="navbar">
 
     <!-- Logo -->
     <a routerLink="/" class="logo">
       <img src="logo.png" alt="El Sabrosito">
     </a>
 
-    <!-- Ubicación -->
-    <div class="item">
-      <span>📍</span>
-      <span>
-        Moniquirá, Boyacá<br>
-        Colombia
-      </span>
-    </div>
+    <!-- Botón móvil -->
+    <button class="hamburger" (click)="toggleMenu()">
+      ☰
+    </button>
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/573118798975" target="_blank" class="item">
-      <span>💬</span>
-      <span>311 8798975</span>
-    </a>
-
-    <!-- Correo -->
-    <a href="mailto:yogurelsabrosito@hotmail.com" class="item">
-      <span>✉</span>
-      <span>yogurelsabrosito@hotmail.com</span>
-    </a>
-
-  </div>
-
-  <!-- Navegación -->
-  <nav class="navbar">
-    <ul>
-
-      <li><a routerLink="/">Home</a></li>
-
-      <li><a routerLink="/productos">Productos</a></li>
-
-      <li><a routerLink="/donde-estamos">Dónde Estamos</a></li>
-
-      <li><a routerLink="/recetas-y-nutricion">
-        Recetas Y Nutrición
-      </a></li>
-
-      <li><a routerLink="/contacto">Contacto</a></li>
-
-      <li><a routerLink="/quienes-somos">Quiénes Somos</a></li>
-
+    <!-- Menú -->
+    <ul [class.active]="menuOpen">
+      <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/productos" routerLinkActive="active" (click)="closeMenu()">Productos</a></li>
+      <li><a routerLink="/donde-estamos" routerLinkActive="active" (click)="closeMenu()">Dónde Estamos</a></li>
+      <li><a routerLink="/recetas-y-nutricion" routerLinkActive="active" (click)="closeMenu()">Recetas y Nutrición</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="active" (click)="closeMenu()">Contacto</a></li>
+      <li><a routerLink="/quienes-somos" routerLinkActive="active" (click)="closeMenu()">Quiénes Somos</a></li>
     </ul>
+
   </nav>
 
 </header>
