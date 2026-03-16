@@ -19,7 +19,6 @@ export class Home implements OnInit, OnDestroy {
   {
     src: 'carrousel/carrusel-3.png'
   }
-
 ];
 
 indiceActivo = 1;

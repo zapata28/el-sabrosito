@@ -103,7 +103,7 @@
 }
 
 .destacados {
-  padding: 30px 0px;
+  padding: 10px 0px;
   text-align: center;
 }
 
@@ -128,16 +128,19 @@
   transition: transform 0.3s ease;
 }
 
-.card:hover {
+.card:hover{
   transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
   margin-bottom: 1rem;
+  background: #f7f7f7;
 }
 
 .cta {
@@ -188,4 +191,26 @@
     opacity: 1;
     transform: translate(-50%, 0);
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.whatsapp{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
 }
